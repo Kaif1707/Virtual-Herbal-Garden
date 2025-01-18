@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sage - Virtual Herbal Garden</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Inline CSS for Image Size -->
+    <style>
+        .sage-overview img {
+            width: 70%; /* Adjusted size */
+            height: auto; /* Maintain aspect ratio */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Virtual Herbal Garden</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="herbs.html">Herbs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="herbs-hero text-center" data-aos="fade-up">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-4">Sage - The Healing Herb</h1>
+            <p class="lead mb-5">Explore the therapeutic benefits, uses, and growing conditions of sage, a herb known for its culinary and medicinal properties.</p>
+        </div>
+    </section>
+
+    <!-- Sage Details -->
+    <section class="sage-details py-5">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Overview -->
+                <div class="col-md-6" data-aos="fade-up">
+                    <div class="sage-overview">
+                        <h3>Overview</h3>
+                        <p>Sage is a powerful herb known for its distinct aroma and numerous health benefits. It has been used for centuries for its medicinal properties, particularly in improving digestion, enhancing memory, and reducing inflammation.</p>
+                        <img src="https://imgs.search.brave.com/0H26136ANYROkasH8oqB_yPJAFQ1e7puzBgpvkgW-Qk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTEy/ODYwMzYwL3Bob3Rv/L3B1cnBsZS1zYWdl/LmpwZz9zPTYxMng2/MTImdz0wJms9MjAm/Yz1iOFVIQ1VqUTMz/SkhkYklYeEVfamZB/N210TTl4WnV5ZnZh/ajhxNEZwc2VZPQ" alt="Sage Plant" class="img-fluid rounded">
+                    </div>
+                </div>
+
+                <!-- Botanical Details -->
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="sage-botanical-details">
+                        <h3>Botanical Details</h3>
+                        <ul>
+                            <li><strong>Scientific Name:</strong> Salvia officinalis</li>
+                            <li><strong>Family:</strong> Lamiaceae</li>
+                            <li><strong>Origin:</strong> Mediterranean region</li>
+                            <li><strong>Types:</strong> Common Sage, Purple Sage, Golden Sage</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4 mt-4">
+                <!-- Key Benefits -->
+                <div class="col-md-6" data-aos="fade-up">
+                    <div class="sage-benefits">
+                        <h3>Key Benefits</h3>
+                        <ul>
+                            <li>Improves digestion</li>
+                            <li>Boosts memory and cognitive function</li>
+                            <li>Reduces inflammation and pain</li>
+                            <li>Rich in antioxidants</li>
+                            <li>Supports oral health</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Uses -->
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="sage-uses">
+                        <h3>Uses</h3>
+                        <ul>
+                            <li>Sage tea for digestive support</li>
+                            <li>Used in cooking to flavor meats and sauces</li>
+                            <li>Topical application for skin healing</li>
+                            <li>Essential oil used in aromatherapy for relaxation</li>
+                            <li>Natural remedy for sore throat and cough</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4 mt-4">
+                <!-- Growing Conditions -->
+                <div class="col-md-12" data-aos="fade-up">
+                    <div class="sage-growing-conditions">
+                        <h3>Growing Conditions</h3>
+                        <p>Sage thrives in well-drained soil and full sunlight. It is a hardy herb that can tolerate drought conditions but prefers regular watering. It can be grown in garden beds or containers and should be pruned to encourage new growth and maintain its shape.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Virtual Herbal Garden</h5>
+                    <p>Exploring the healing power of nature through traditional herbal wisdom.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p>&copy; 2024 Virtual Herbal Garden. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+</body>
+</html>

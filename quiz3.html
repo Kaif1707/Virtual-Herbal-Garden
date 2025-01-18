@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Herbal Garden Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e8f5e9; /* Soft green background */
+            color: #2e7d32; /* Dark green text */
+        }
+
+        .quiz-container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #ffffff; /* White card */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            border-radius: 12px;
+        }
+
+        .quiz-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .quiz-header h1 {
+            font-size: 28px;
+            margin: 0;
+            color: #1b5e20; /* Deep green header */
+        }
+
+        .question {
+            font-size: 18px;
+            margin: 20px 0;
+            color: #388e3c; /* Medium green for questions */
+        }
+
+        .options {
+            list-style: none;
+            padding: 0;
+        }
+
+        .options li {
+            margin: 10px 0;
+        }
+
+        .options input {
+            margin-right: 10px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            margin: 20px 0;
+            background-color: #43a047; /* Vibrant green button */
+            color: #ffffff;
+            text-align: center;
+            text-decoration: none;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #2e7d32; /* Darker green on hover */
+        }
+
+        .result {
+            font-size: 20px;
+            margin-top: 20px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .result.green {
+            color: #2e7d32; /* Success color */
+        }
+
+        .result.red {
+            color: #c62828; /* Failure color */
+        }
+
+        @media (max-width: 600px) {
+            .quiz-container {
+                margin: 20px;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <div class="quiz-header">
+            <h1>Virtual Herbal Garden Quiz</h1>
+        </div>
+        <div id="quiz">
+            <div class="question">1. Which of the following phyto-compounds is most commonly responsible for the anti-inflammatory properties of Turmeric (Curcuma longa)?
+            </div>
+            <ul class="options">
+                <li><input type="radio" name="q1" value="Linalool"> Linalool</li>
+                <li><input type="radio" name="q1" value="Curcumin"> Curcumin</li>
+                <li><input type="radio" name="q1" value="Thymol"> Thymol</li>
+                <li><input type="radio" name="q1" value="Eugenol"> Eugenol</li>
+            </ul>
+
+            <div class="question">2.What is the primary mechanism by which flavonoids in plants such as Green Tea (Camellia sinensis) exhibit anticancer properties?
+            </div>
+            <ul class="options">
+                <li><input type="radio" name="q2" value="Inducing apoptosis in cancer cells "> Inducing apoptosis in cancer cells</li>
+                <li><input type="radio" name="q2" value="Inhibiting DNA replication in cancerous cells"> Inhibiting DNA replication in cancerous cells </li>
+                <li><input type="radio" name="q2" value="Suppressing angiogenesis"> Suppressing angiogenesis</li>
+                <li><input type="radio" name="q2" value="Modulating immune response through cytokine production"> Modulating immune response through cytokine production</li>
+            </ul>
+
+            <div class="question">3.  Which of the following bioinformatics tools would be most useful in predicting the molecular docking interactions of bioactive compounds in herbs with human enzymes?
+            </div>
+            <ul class="options">
+                <li><input type="radio" name="q3" value="BLAST"> BLAST</li>
+                <li><input type="radio" name="q3" value="AutoDock"> AutoDock</li>
+                <li><input type="radio" name="q3" value="Gene Ontology"> Gene Ontology</li>
+                <li><input type="radio" name="q3" value="Clustal Omega"> Clustal Omega </li>
+            </ul>
+
+            <div class="question">4. Which environmental factor has the greatest impact on the concentration of essential oils in plants such as Lavender (Lavandula angustifolia)?
+
+            </div>
+            <ul class="options">
+                <li><input type="radio" name="q4" value="Soil pH"> Soil pH</li>
+                <li><input type="radio" name="q4" value="Light Intesity"> Light Intensity</li>
+                <li><input type="radio" name="q4" value="Temperature fluctuations"> Temperature fluctuations</li>
+                <li><input type="radio" name="q4" value=" Water availability"> Water availability</li>
+            </ul>
+
+            <div class="question">5.In virtual reality (VR) simulations of herbal gardens, what method is most effective for creating a realistic experience of plant growth cycles?
+
+
+            </div>
+            <ul class="options">
+                <li><input type="radio" name="q5" value="Procedural animation based on real-world growth algorithms"> Procedural animation based on real-world growth algorithms</li>
+                <li><input type="radio" name="q5" value="Keyframe animation of plant growth stages"> Keyframe animation of plant growth stages</li>
+                <li><input type="radio" name="q5" value="Motion capture of plant movements"> Motion capture of plant movements</li>
+                <li><input type="radio" name="q5" value="Pre-recorded video of plant growth cycles"> Pre-recorded video of plant growth cycles</li>
+            </ul>
+
+            <div class="question">6. Which of the following compounds found in peppermint (Mentha piperita) is primarily responsible for its cooling sensation when applied topically?
+
+            </div>
+            <ul class="options">
+                <li><input type="radio" name="q6" value="Carvone"> Carvone</li>
+                <li><input type="radio" name="q6" value="Thymol"> Thymol</li>
+                <li><input type="radio" name="q6" value="Linalool"> Linalool</li>
+                <li><input type="radio" name="q6" value="Menthol"> Menthol</li>
+            </ul>
+
+            <div class="question">7.Which plant in the herbal garden would be most effective in managing oxidative stress through its high content of antioxidants, particularly flavonoids and polyphenols?
+
+            </div>
+            <ul class="options">
+                <li><input type="radio" name="q7" value=" Ginkgo Biloba ">  Ginkgo Biloba</li>
+                <li><input type="radio" name="q7" value="Rosemary"> Rosemary</li>
+                <li><input type="radio" name="q7" value="Echinacea purpurea"> Echinacea purpurea</li>
+                <li><input type="radio" name="q7" value="Sage (Salvia officinalis) "> Sage (Salvia officinalis)</li>
+            </ul>
+
+            <div class="question">8.What key limitation exists when simulating the growth of medicinal plants in a virtual herbal garden with respect to their interaction with soil microbiota?
+
+            </div>
+            <ul class="options">
+                <li><input type="radio" name="q8" value="Limited accuracy in predicting nutrient cycling "> Limited accuracy in predicting nutrient cycling </li>
+                <li><input type="radio" name="q8" value="Inability to model root system responses to symbiotic organisms "> Inability to model root system responses to symbiotic organisms                </li>
+                <li><input type="radio" name="q8" value="Lack of detailed atmospheric interaction"> Lack of detailed atmospheric interaction                </li>
+                <li><input type="radio" name="q8" value="All of the above "> All of the above</li>
+            </ul>
+
+            <div class="question">9. What is the primary ecological function of phytochemicals like alkaloids and terpenoids in plants within a virtual herbal garden environment?
+
+
+            </div>
+            <ul class="options">
+                <li><input type="radio" name="q9" value="Protecting plants from herbivores and pathogens      "> Protecting plants from herbivores and pathogens                </li>
+                <li><input type="radio" name="q9" value="Assisting in pollination processes  "> Assisting in pollination processes                </li>
+                <li><input type="radio" name="q9" value=" Enhancing photosynthesis efficiency     ">  Enhancing photosynthesis efficiency                </li>
+                <li><input type="radio" name="q9" value="Facilitating nutrient uptake from the soil  "> Facilitating nutrient uptake from the soil                </li>
+            </ul>
+
+            <div class="question">10.Which of the following challenges would be most significant in using augmented reality (AR) to teach users about medicinal herb identification in a virtual garden?
+
+            </div>
+            <ul class="options">
+                <li><input type="radio" name="q10" value="Maintaining accurate environmental interaction                    "> Maintaining accurate environmental interaction  </li>
+                <li><input type="radio" name="q10" value="Lack of appropriate interface for data visualization   "> Lack of appropriate interface for data visualization                </li>
+                <li><input type="radio" name="q10" value="Simulating the interaction of herbs with human physiology  "> Simulating the interaction of herbs with human physiology                </li>
+                <li><input type="radio" name="q10" value=" Integrating real-time global medicinal knowledge updates      ">  Integrating real-time global medicinal knowledge updates</li>
+            </ul>
+
+            <button class="btn" onclick="submitQuiz()">Submit</button>
+            <div class="result" id="result"></div>
+        </div>
+    </div>
+
+    <script>
+        function submitQuiz() {
+    const answers = {
+        q1: "Curcumin",
+        q2: "Suppressing angiogenesis",
+        q3: "AutoDock",
+        q4: "Temperature fluctuations",
+        q5: " Procedural animation based on real-world growth algorithms",
+        q6: "Menthol",
+        q7: " Ginkgo Biloba",
+        q8: "All of the above",
+        q9: "rotecting plants from herbivores and pathogens",
+        q10: "Maintaining accurate environmental interaction"
+    };
+
+    let score = 0;
+    const totalQuestions = Object.keys(answers).length;
+
+    for (let key in answers) {
+        const selectedOption = document.querySelector(`input[name="${key}"]:checked`);
+        if (selectedOption && selectedOption.value === answers[key]) {
+            score++;
+        }
+    }
+
+    const resultDiv = document.getElementById('result');
+    resultDiv.textContent = `You scored ${score} out of ${totalQuestions}!`;
+
+    if (score === totalQuestions) {
+        resultDiv.className = "result green";
+    } else {
+        resultDiv.className = "result red";
+    }
+}
+
+    </script>
+</body>
+</html>

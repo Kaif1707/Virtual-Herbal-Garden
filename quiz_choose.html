@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select Difficulty</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+      background-color: #222;
+    }
+
+    /* Background layer with blur */
+    .background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('img/background.jpeg'); /* Replace with your image path */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      filter: blur(6px);
+      z-index: -1;
+    }
+
+    /* Content container */
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 60px;
+      color: white;
+      margin-bottom: 50px;
+    }
+
+    .difficulty-container {
+      display: flex;
+      gap: 50px;
+    }
+
+    .difficulty-box {
+      width: 225px;
+      height: 225px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 48px;
+      cursor: pointer;
+      border-radius: 50%;
+      border: 4px solid white;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .difficulty-box:hover {
+      transform: scale(1.1); /* Zoom in */
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Add shadow */
+    }
+
+    .green {
+      background-color: limegreen;
+    }
+    .orange {
+      background-color: darkorange;
+    }
+    .red {
+      background-color: red;
+    }
+
+    .footer-text {
+      position: fixed;
+      bottom: 50px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 30px;
+      color: white;
+      text-align: center;
+    }
+  </style>
+  <script>
+    function handleClick(path) {
+      window.location.href = path;
+    }
+  </script>
+</head>
+<body>
+  <!-- Background layer -->
+  <div class="background"></div>
+
+  <!-- Main Difficulty Selection Page -->
+  <div class="container">
+    <h1>Select Your Difficulty</h1>
+    <div class="difficulty-container">
+      <button onclick="handleClick('quiz1.html')" class="difficulty-box green" id="easy-box">
+        Easy
+      </button>
+      <button onclick="handleClick('quiz2.html')" class="difficulty-box orange" id="medium-box">
+        Medium
+      </button>
+      <button onclick="handleClick('quiz3.html')" class="difficulty-box red" id="hard-box">
+        Hard
+      </button>
+    </div>
+  </div>
+
+  <!-- Footer Text -->
+  <div class="footer-text">
+    The Choice is Yours
+  </div>
+</body>
+</html>

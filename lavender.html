@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lavender - Virtual Herbal Garden</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Inline CSS for Image Size -->
+    <style>
+        .lavender-overview img {
+            width: 70%; /* Adjusted size */
+            height: auto; /* Maintain aspect ratio */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Virtual Herbal Garden</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="herbs.html">Herbs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="herbs-hero text-center" data-aos="fade-up">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-4">Lavender - The Calming Herb</h1>
+            <p class="lead mb-5">Explore the soothing properties, health benefits, and uses of this fragrant herb beloved for relaxation and wellness.</p>
+        </div>
+    </section>
+
+    <!-- Lavender Details -->
+    <section class="lavender-details py-5">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Overview -->
+                <div class="col-md-6" data-aos="fade-up">
+                    <div class="lavender-overview">
+                        <h3>Overview</h3>
+                        <p>Lavender is a fragrant herb known for its calming and relaxing effects. It is widely used in aromatherapy, teas, and cosmetics. Its soothing scent has made it a popular choice for stress relief and sleep improvement.</p>
+                        <img src="https://media.istockphoto.com/id/1167494214/photo/sunset-field.jpg?s=612x612&w=0&k=20&c=sMiwN7ir1MMR9kPIpKKNYC8pAgjqwhX92IEvy-KcpB8=" alt="Lavender Plant" class="img-fluid rounded">
+                    </div>
+                </div>
+
+                <!-- Botanical Details -->
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="lavender-botanical-details">
+                        <h3>Botanical Details</h3>
+                        <ul>
+                            <li><strong>Scientific Name:</strong> Lavandula angustifolia</li>
+                            <li><strong>Family:</strong> Lamiaceae</li>
+                            <li><strong>Origin:</strong> Mediterranean Region</li>
+                            <li><strong>Types:</strong> English Lavender, French Lavender, Spanish Lavender</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4 mt-4">
+                <!-- Key Benefits -->
+                <div class="col-md-6" data-aos="fade-up">
+                    <div class="lavender-benefits">
+                        <h3>Key Benefits</h3>
+                        <ul>
+                            <li>Promotes relaxation and reduces stress</li>
+                            <li>Improves sleep quality</li>
+                            <li>Relieves headaches and migraines</li>
+                            <li>Has anti-inflammatory properties</li>
+                            <li>Supports skin health and healing</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Uses -->
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="lavender-uses">
+                        <h3>Uses</h3>
+                        <ul>
+                            <li>Aromatherapy for stress relief and relaxation</li>
+                            <li>Lavender oil for skincare and pain relief</li>
+                            <li>Lavender tea for better sleep and digestion</li>
+                            <li>Used in cooking for flavoring dishes and desserts</li>
+                            <li>Incorporated in homemade beauty products like lotions and soaps</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4 mt-4">
+                <!-- Growing Conditions -->
+                <div class="col-md-12" data-aos="fade-up">
+                    <div class="lavender-growing-conditions">
+                        <h3>Growing Conditions</h3>
+                        <p>Lavender grows best in dry, well-drained soil with plenty of sunlight. It is a hardy plant that thrives in warm climates. Proper spacing and occasional pruning will help the plant maintain a healthy, compact shape. Lavender is also drought-resistant once established.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Virtual Herbal Garden</h5>
+                    <p>Exploring the healing power of nature through traditional herbal wisdom.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p>&copy; 2024 Virtual Herbal Garden. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+</body>
+</html>

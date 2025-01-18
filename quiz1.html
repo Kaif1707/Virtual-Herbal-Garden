@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Herbal Garden Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e8f5e9; /* Soft green background */
+            color: #2e7d32; /* Dark green text */
+        }
+
+        .quiz-container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #ffffff; /* White card */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            border-radius: 12px;
+        }
+
+        .quiz-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .quiz-header h1 {
+            font-size: 28px;
+            margin: 0;
+            color: #1b5e20; /* Deep green header */
+        }
+
+        .question {
+            font-size: 18px;
+            margin: 20px 0;
+            color: #388e3c; /* Medium green for questions */
+        }
+
+        .options {
+            list-style: none;
+            padding: 0;
+        }
+
+        .options li {
+            margin: 10px 0;
+        }
+
+        .options input {
+            margin-right: 10px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            margin: 20px 0;
+            background-color: #43a047; /* Vibrant green button */
+            color: #ffffff;
+            text-align: center;
+            text-decoration: none;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #2e7d32; /* Darker green on hover */
+        }
+
+        .result {
+            font-size: 20px;
+            margin-top: 20px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .result.green {
+            color: #2e7d32; /* Success color */
+        }
+
+        .result.red {
+            color: #c62828; /* Failure color */
+        }
+
+        @media (max-width: 600px) {
+            .quiz-container {
+                margin: 20px;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <div class="quiz-header">
+            <h1>Virtual Herbal Garden Quiz</h1>
+        </div>
+        <div id="quiz">
+            <div class="question">1. Which herb is known as the 'Queen of Herbs'?</div>
+            <ul class="options">
+                <li><input type="radio" name="q1" value="Tulsi"> Tulsi</li>
+                <li><input type="radio" name="q1" value="Mint"> Mint</li>
+                <li><input type="radio" name="q1" value="Basil"> Basil</li>
+                <li><input type="radio" name="q1" value="Rosemary"> Rosemary</li>
+            </ul>
+
+            <div class="question">2. Which herb is commonly used to soothe an upset stomach?</div>
+            <ul class="options">
+                <li><input type="radio" name="q2" value="Peppermint"> Peppermint</li>
+                <li><input type="radio" name="q2" value="Lavender"> Lavender</li>
+                <li><input type="radio" name="q2" value="Thyme"> Thyme</li>
+                <li><input type="radio" name="q2" value="Sage"> Sage</li>
+            </ul>
+
+            <div class="question">3. Which herb is an excellent natural mosquito repellent?</div>
+            <ul class="options">
+                <li><input type="radio" name="q3" value="Lemongrass"> Lemongrass</li>
+                <li><input type="radio" name="q3" value="Basil"> Basil</li>
+                <li><input type="radio" name="q3" value="Mint"> Mint</li>
+                <li><input type="radio" name="q3" value="Rosemary"> Rosemary</li>
+            </ul>
+
+            <div class="question">4. Which herb is known for its calming properties?</div>
+            <ul class="options">
+                <li><input type="radio" name="q4" value="Lavender"> Lavender</li>
+                <li><input type="radio" name="q4" value="Cilantro"> Cilantro</li>
+                <li><input type="radio" name="q4" value="Oregano"> Oregano</li>
+                <li><input type="radio" name="q4" value="Dill"> Dill</li>
+            </ul>
+
+            <div class="question">5. Which herb is commonly used in pesto sauce?</div>
+            <ul class="options">
+                <li><input type="radio" name="q5" value="Basil"> Basil</li>
+                <li><input type="radio" name="q5" value="Parsley"> Parsley</li>
+                <li><input type="radio" name="q5" value="Thyme"> Thyme</li>
+                <li><input type="radio" name="q5" value="Rosemary"> Rosemary</li>
+            </ul>
+
+            <div class="question">6. Which herb is known for its licorice-like flavor?</div>
+            <ul class="options">
+                <li><input type="radio" name="q6" value="Fennel"> Fennel</li>
+                <li><input type="radio" name="q6" value="Basil"> Basil</li>
+                <li><input type="radio" name="q6" value="Cilantro"> Cilantro</li>
+                <li><input type="radio" name="q6" value="Mint"> Mint</li>
+            </ul>
+
+            <div class="question">7. Which herb is often paired with rosemary for seasoning meat?</div>
+            <ul class="options">
+                <li><input type="radio" name="q7" value="Thyme"> Thyme</li>
+                <li><input type="radio" name="q7" value="Dill"> Dill</li>
+                <li><input type="radio" name="q7" value="Mint"> Mint</li>
+                <li><input type="radio" name="q7" value="Cilantro"> Cilantro</li>
+            </ul>
+
+            <div class="question">8. Which herb is a key ingredient in guacamole?</div>
+            <ul class="options">
+                <li><input type="radio" name="q8" value="Cilantro"> Cilantro</li>
+                <li><input type="radio" name="q8" value="Basil"> Basil</li>
+                <li><input type="radio" name="q8" value="Rosemary"> Rosemary</li>
+                <li><input type="radio" name="q8" value="Thyme"> Thyme</li>
+            </ul>
+
+            <div class="question">9. Which herb is often added to tea for its digestive benefits?</div>
+            <ul class="options">
+                <li><input type="radio" name="q9" value="Mint"> Mint</li>
+                <li><input type="radio" name="q9" value="Parsley"> Parsley</li>
+                <li><input type="radio" name="q9" value="Oregano"> Oregano</li>
+                <li><input type="radio" name="q9" value="Dill"> Dill</li>
+            </ul>
+
+            <div class="question">10. Which herb is used to garnish soups and stews?</div>
+            <ul class="options">
+                <li><input type="radio" name="q10" value="Parsley"> Parsley</li>
+                <li><input type="radio" name="q10" value="Thyme"> Thyme</li>
+                <li><input type="radio" name="q10" value="Rosemary"> Rosemary</li>
+                <li><input type="radio" name="q10" value="Cilantro"> Cilantro</li>
+            </ul>
+
+            <button class="btn" onclick="submitQuiz()">Submit</button>
+            <div class="result" id="result"></div>
+        </div>
+    </div>
+
+    <script>
+        function submitQuiz() {
+            const answers = {
+                q1: "Tulsi",
+                q2: "Peppermint",
+                q3: "Lemongrass",
+                q4: "Lavender",
+                q5: "Basil",
+                q6: "Fennel",
+                q7: "Thyme",
+                q8: "Cilantro",
+                q9: "Mint",
+                q10: "Parsley"
+            };
+
+            let score = 0;
+            const totalQuestions = Object.keys(answers).length;
+
+            for (let key in answers) {
+                const selectedOption = document.querySelector(`input[name="${key}"]:checked`);
+                if (selectedOption && selectedOption.value === answers[key]) {
+                    score++;
+                }
+            }
+
+            const resultDiv = document.getElementById('result');
+            resultDiv.textContent = `You scored ${score} out of ${totalQuestions}!`;
+
+            if (score === totalQuestions) {
+                resultDiv.className = "result green";
+            } else {
+                resultDiv.className = "result red";
+            }
+        }
+    </script>
+</body>
+</html>
